@@ -17,5 +17,5 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/luci-theme-bootstrap/luci-theme-neobird/' feeds/luci/collections/luci/Makefile
 
 # Modify default hostname
-sed -i 's/OpenWrt/Esom/' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/UnSafe/' package/base-files/files/bin/config_generate
 
