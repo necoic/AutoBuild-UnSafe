@@ -15,4 +15,5 @@ sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git neobird https://github.com/thinktip/luci-theme-neobird.git' >>feeds.conf.default
+
+git clone https://github.com/thinktip/luci-theme-neobird.git package/lean
