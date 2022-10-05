@@ -166,15 +166,15 @@ jobs:
         files: ${{ env.FIRMWARE }}/*
       
     - name: Upload to server
-     id: server
-     if: steps.organize.outputs.status == 'success' && env.UPLOAD_SERVER == 'true' && !cancelled()
-     uses: wlixcc/SFTP-Deploy-Action@v1.0 
-     with:  
-       username: '${{ secrets.USERNAME }}'
-       server: '${{ secrets.SERVER_IP }}'
-       ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-       local_path: './openwrt/bin/targets*'
-       remote_path: '/home/ubuntu/openwrt/ac2100'
+      id: server
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_SERVER == 'true' && !cancelled()
+      uses: wlixcc/SFTP-Deploy-Action@v1.0 
+      with:  
+        username: '${{ secrets.USERNAME }}'
+        server: '${{ secrets.SERVER_IP }}'
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        local_path: './openwrt/bin/targets*'
+        remote_path: '/home/ubuntu/openwrt/ac2100'
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
