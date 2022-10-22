@@ -10,7 +10,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OneCloud OpenWrt
+name: Build Orange Pi Zero OpenWrt
 
 on:
   repository_dispatch:
